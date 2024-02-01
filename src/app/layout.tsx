@@ -1,10 +1,9 @@
 import { MainContainer } from '@/components';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import Head from 'next/head';
-import './globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
+import '@/styles/globals.css';
+import { ThemeProvider } from '@mui/material';
+import theme from '@/styles/theme';
 
 export const metadata: Metadata = {
   title: '마이 포켓 포켓몬 라이브러리',
@@ -17,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang='ko'>
       <Head>
         <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
         <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
@@ -27,8 +26,10 @@ export default function RootLayout({
         <meta name='msapplication-TileColor' content='#ffc40d' />
         <meta name='theme-color' content='#ffffff' />
       </Head>
-      <body className={inter.className}>
-        <MainContainer>{children}</MainContainer>
+      <body>
+        <ThemeProvider theme={theme}>
+          <MainContainer>{children}</MainContainer>
+        </ThemeProvider>
       </body>
     </html>
   );
