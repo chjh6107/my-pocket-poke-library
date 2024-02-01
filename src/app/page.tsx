@@ -1,14 +1,9 @@
-'use client';
-
 import { Typography } from '@mui/material';
-import { useState } from 'react';
 
 export default function Home() {
-  const [a, b] = useState(0);
-
   return (
     <div>
-      <Typography fontWeight={100} fontSize={40}>
+      <Typography fontWeight={100} fontSize={40} fontFamily='Pretendard Variable'>
         세상에 이런 폰트가 나오다니 천재인듯 100
       </Typography>
       <Typography className='flex font-extralight' fontSize={40}>
@@ -16,6 +11,24 @@ export default function Home() {
       </Typography>
       <Typography className='text font-light' fontSize={40}>
         세상에 이런 폰트가 나오다니 천재인듯 300
+      </Typography>
+      <Typography className='text font-normal' fontSize={40}>
+        세상에 이런 폰트가 나오다니 천재인듯 400
+      </Typography>
+      <Typography className='text font-normal' fontSize={40}>
+        세상에 이런 폰트가 나오다니 천재인듯 400
+      </Typography>
+      <Typography className='text font-normal' fontSize={40}>
+        세상에 이런 폰트가 나오다니 천재인듯 400
+      </Typography>
+      <Typography className='text font-normal' fontSize={40}>
+        세상에 이런 폰트가 나오다니 천재인듯 400
+      </Typography>
+      <Typography className='text font-normal' fontSize={40}>
+        세상에 이런 폰트가 나오다니 천재인듯 400
+      </Typography>
+      <Typography className='text font-normal' fontSize={40}>
+        세상에 이런 폰트가 나오다니 천재인듯 400
       </Typography>
       <Typography className='text font-normal' fontSize={40}>
         세상에 이런 폰트가 나오다니 천재인듯 400

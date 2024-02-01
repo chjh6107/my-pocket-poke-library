@@ -5,7 +5,7 @@ import { createTheme } from '@mui/material';
 const theme = createTheme({
   typography: {
     fontFamily: [
-      'Pretendard-Regular',
+      'Pretendard Variable',
       '-apple-system',
       'BlinkMacSystemFont',
       'Segoe UI',
