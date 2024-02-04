@@ -1,6 +1,15 @@
+'use client';
+
+import { getPokemonList } from '@/api/functions';
 import { Typography } from '@mui/material';
+import { useQuery } from '@tanstack/react-query';
 
 export default function Home() {
+  const { data } = useQuery({
+    queryKey: ['pokemon', { status: 'completed', test: '이거도되네' }],
+    queryFn: getPokemonList,
+  });
+
   return (
     <div>
       <Typography fontWeight={100} fontSize={40} fontFamily='Pretendard Variable'>

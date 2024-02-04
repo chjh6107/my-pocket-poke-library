@@ -1,9 +1,10 @@
+import { ReactQueryCustomProvider } from '@/api';
 import { MainContainer } from '@/components';
+import '@/styles/globals.css';
+import theme from '@/styles/theme';
+import { ThemeProvider } from '@mui/material';
 import type { Metadata } from 'next';
 import Head from 'next/head';
-import '@/styles/globals.css';
-import { ThemeProvider } from '@mui/material';
-import theme from '@/styles/theme';
 
 export const metadata: Metadata = {
   title: '마이 포켓 포켓몬 라이브러리',
@@ -27,9 +28,11 @@ export default function RootLayout({
         <meta name='theme-color' content='#ffffff' />
       </Head>
       <body>
-        <ThemeProvider theme={theme}>
-          <MainContainer>{children}</MainContainer>
-        </ThemeProvider>
+        <ReactQueryCustomProvider>
+          <ThemeProvider theme={theme}>
+            <MainContainer>{children}</MainContainer>
+          </ThemeProvider>
+        </ReactQueryCustomProvider>
       </body>
     </html>
   );
