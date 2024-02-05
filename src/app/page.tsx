@@ -1,17 +1,20 @@
 'use client';
 
 import { getPokemonList } from '@/api/functions';
-import { Typography } from '@mui/material';
+import { Alert, Typography } from '@mui/material';
 import { useQuery } from '@tanstack/react-query';
 
 export default function Home() {
-  const { data } = useQuery({
+  const { data, isError } = useQuery({
     queryKey: ['pokemon', { status: 'completed', test: '이거도되네' }],
     queryFn: getPokemonList,
   });
 
+  console.log(isError);
+
   return (
     <div>
+      <Alert severity='error'>얼럿 디자인 테스트</Alert>
       <Typography fontWeight={100} fontSize={40} fontFamily='Pretendard Variable'>
         세상에 이런 폰트가 나오다니 천재인듯 100
       </Typography>
